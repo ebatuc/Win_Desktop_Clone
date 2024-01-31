@@ -1,0 +1,38 @@
+body {
+    padding: 50px;
+    padding-left: 30%;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background-color: #0078d4;
+    color: white;
+}
+
+.powericon {
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    width: 512px;
+    height: 512px;
+}
+
+.powericon:hover {
+    background-color: rgba(228, 218, 218, 0.41);
+    border-radius: 50%;
+}
+
+
+
+.barprog {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 200px;
+}
+
+
+.winicon img {
+    width: 350px;
+    height: 350px;
+}

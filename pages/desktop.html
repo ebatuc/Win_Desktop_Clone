@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows 10 Masaüstü</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/desktop.css">
+</head>
+
+<body class="bodydesktop">
+
+    <!-- ! Masaüstü Simgeler -->
+    <div class="deskicon" data-bs-toggle="modal" data-bs-target="#pcmodal">
+        <img src="../assets/images/computer-solid.svg" alt="">
+        Bilgisayarım
+    </div>
+    <div class="deskicon" data-bs-toggle="modal" data-bs-target="#docmodal">
+        <img src="../assets/images/folder-open-svgrepo-com.svg" alt="">
+        Belgelerim
+    </div>
+    <div class="deskicon" data-bs-toggle="modal" data-bs-target="#imgmodal">
+        <img src="../assets/images/folder-open-svgrepo-com.svg" alt="">
+        Resimler
+    </div>
+    <div class="deskicon" data-bs-toggle="modal" data-bs-target="#appmodal">
+        <img src="../assets/images/folder-open-svgrepo-com.svg" alt="">
+        Uygulamalar
+    </div>
+
+
+    <!-- ! PC Modal Yapısı -->
+    <div class="modal" id="pcmodal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content ">
+                <div class="modal-header">
+                    <h3>Bilgisayarım</h3>
+                    <button class="close btn btn-danger btn-sm" type="button" data-bs-dismiss="modal" aria-label="Close"
+                        style="width: 8%; border-radius: 0px;">X</button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="container text-center">
+                        <div class="row p-3">
+                            <div class="col-2">
+                                <ul class="list-group align-items-baseline">
+                                    <p class="text-decoration-underline pb-1">Hızlı Erişim</p>
+                                    <a href="#pc" class="pt-1 pb-1 ps-2 pe-5" data-bs-toggle="modal"
+                                        data-bs-target="#pcmodal">Bilgisayarım</a>
+                                    <a class="pt-1 pb-1 ps-2 pe-5" data-bs-toggle="modal"
+                                        data-bs-target="#imgmodal">Resimler</a>
+                                    <a class="pt-1 pb-1 ps-2 pe-5" data-bs-toggle="modal"
+                                        data-bs-target="#docmodal">Belgelerim</a>
+                                    <a class="pt-1 pb-1 ps-2 pe-5" data-bs-toggle="modal"
+                                        data-bs-target="#appmodal">Uygulamalar</a>
+                                </ul>
+                            </div>
+                            <div class="col-1 p-0 mb-2">
+                                <hr class="vr">
+                            </div>
+                            <div class="col-9 ms-auto "
+                                style="height: 40vh; display: flex; flex-direction: column; align-items: flex-start;">
+                                <div class="p-3 ps-2 pe-3 cont">
+                                    <div style="display: flex; align-items: center;">
+                                        <i class="fa-solid fa-hard-drive fa-2xl " style="color: #4c4e52;"></i>
+                                        <span class="ms-2 mb-3">Yerel Disk (C:)</span>
+                                    </div>
+                                    <div class="progress rounded-0" style="width: 100%;">
+                                        <div class="progress-bar bg-primary" role="progressbar" style="width: 60%;"
+                                            aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+                                        </div>
+                                    </div>
+                                    <small class="text-body-secondary">200 GB boş, 500 GB toplam</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ! ------------------------------------------------------------- -->
+
+    <!-- ! Document Modal Yapısı -->
+    <div class="modal" id="docmodal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content ">
+                <div class="modal-header">
+                    <h3>Belgelerim</h3>
+                    <button class="close btn btn-danger btn-sm" type="button" data-bs-dismiss="modal" aria-label="Close"
+                        style="width: 8%; border-radius: 0px;">X</button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="container text-center">
+                        <div class="row p-3">
+                            <div class="col-2">
+                                <ul class="list-group align-items-baseline">
+                                    <p class="text-decoration-underline pb-1">Hızlı Erişim</p>
+                                    <a class="pt-1 pb-1 ps-2 pe-5" data-bs-toggle="modal"
+                                        data-bs-target="#pcmodal">Bilgisayarım</a>
+                                    <a class="pt-1 pb-1 ps-2 pe-5" data-bs-toggle="modal"
+                                        data-bs-target="#imgmodal">Resimler</a>
+                                    <a class="pt-1 pb-1 ps-2 pe-5" data-bs-toggle="modal"
+                                        data-bs-target="#docmodal">Belgelerim</a>
+                                    <a class="pt-1 pb-1 ps-2 pe-5" data-bs-toggle="modal"
+                                        data-bs-target="#appmodal">Uygulamalar</a>
+                                </ul>
+                            </div>
+                            <div class="col-1 p-0 mb-2">
+                                <hr class="vr">
+                            </div>
+                            <div class="col-9 ms-auto "
+                                style="height: 40vh; display: flex; flex-direction: column; align-items: flex-start;">
+                                <div class="p-3 ps-2 pe-3 cont">
+                                    <div style="display: flex; align-items: center;">
+                                        <i class="fa-regular fa-file-excel fa-2xl " style="color: #4c4e52;"></i>
+                                        <span class="ms-2 mb-3">Excel</span>
+                                    </div>
+                                </div>
+                                <div class="p-3 ps-2 pe-3 cont">
+                                    <div style="display: flex; align-items: center;">
+                                        <i class="fa-regular fa-file-powerpoint fa-2xl " style="color: #4c4e52;"></i>
+                                        <span class="ms-2 mb-3">PowerPoint</span>
+                                    </div>
+                                </div>
+                                <div class="p-3 ps-2 pe-3 cont">
+                                    <div style="display: flex; align-items: center;">
+                                        <i class="fa-regular fa-file-word fa-2xl " style="color: #4c4e52;"></i>
+                                        <span class="ms-2 mb-3">Word</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ! ------------------------------------------------------------- -->
+    <!-- ! Uygulamalar Modal Yapısı -->
+    <div class="modal" id="appmodal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content ">
+                <div class="modal-header">
+                    <h3>Uygulamalar</h3>
+                    <button class="close btn btn-danger btn-sm" type="button" data-bs-dismiss="modal" aria-label="Close"
+                        style="width: 8%; border-radius: 0px;">X</button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="container text-center">
+                        <div class="row p-3">
+                            <div class="col-2">
+                                <ul class="list-group align-items-baseline">
+                                    <p class="text-decoration-underline pb-1">Hızlı Erişim</p>
+                                    <a class="pt-1 pb-1 ps-2 pe-5" data-bs-toggle="modal"
+                                        data-bs-target="#pcmodal">Bilgisayarım</a>
+                                    <a class="pt-1 pb-1 ps-2 pe-5" data-bs-toggle="modal"
+                                        data-bs-target="#imgmodal">Resimler</a>
+                                    <a class="pt-1 pb-1 ps-2 pe-5" data-bs-toggle="modal"
+                                        data-bs-target="#docmodal">Belgelerim</a>
+                                    <a class="pt-1 pb-1 ps-2 pe-5" data-bs-toggle="modal"
+                                        data-bs-target="#appmodal">Uygulamalar</a>
+                                </ul>
+                            </div>
+                            <div class="col-1 p-0 mb-2">
+                                <hr class="vr">
+                            </div>
+                            <div class="col-9 ms-auto "
+                                style="height: 40vh; display: flex; flex-direction: column; align-items: flex-start;">
+                                <div class="container text-center">
+                                    <div class="row row-cols-2">
+                                        <div class="col-3">
+                                            <div class="p-3 ps-2 pe-3 cont">
+                                                <div style="display: flex; align-items: center;">
+                                                    <i class="fa-brands fa-square-whatsapp fa-2xl "
+                                                        style="color: #4c4e52;"></i>
+                                                    <span class="ms-2 mb-3">Whatsapp</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="p-3 ps-2 pe-3 cont">
+                                                    <div style="display: flex; align-items: center;">
+                                                        <i class="fa-brands fa-steam fa-2xl "
+                                                            style="color: #4c4e52;"></i>
+                                                        <span class="ms-2 mb-3">Steam</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-3">
+                                                    <div class="p-3 ps-2 pe-3 cont">
+                                                        <div style="display: flex; align-items: center;">
+                                                            <i class="fa-brands fa-square-whatsapp fa-2xl "
+                                                                style="color: #4c4e52;"></i>
+                                                            <span class="ms-2 mb-3">Whatsapp</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ! ------------------------------------------------------------- -->
+
+
+
+
+    <!-- ! İmage Modal Yapısı -->
+    <div class="modal" id="imgmodal" style="height: 1000px !important;" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content ">
+                <div class="modal-header">
+                    <h3>Resimler</h3>
+                    <button class="close btn btn-danger btn-sm" type="button" data-bs-dismiss="modal" aria-label="Close"
+                        style="width: 8%; border-radius: 0px;">X</button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="container text-center">
+                        <div class="row p-3">
+                            <div class="col-2">
+                                <ul class="list-group align-items-baseline">
+                                    <p class="text-decoration-underline pb-1">Hızlı
+                                        Erişim</p>
+                                    <a class="pt-1 pb-1 ps-2 pe-5" data-bs-toggle="modal"
+                                        data-bs-target="#pcmodal">Bilgisayarım</a>
+                                    <a class="pt-1 pb-1 ps-2 pe-5" data-bs-toggle="modal"
+                                        data-bs-target="#imgmodal">Resimler</a>
+                                    <a class="pt-1 pb-1 ps-2 pe-5" data-bs-toggle="modal"
+                                        data-bs-target="#docmodal">Belgelerim</a>
+                                    <a class="pt-1 pb-1 ps-2 pe-5" data-bs-toggle="modal"
+                                        data-bs-target="#appmodal">Uygulamalar</a>
+                                </ul>
+                            </div>
+                            <div class="col-1 p-0 mb-2">
+                                <hr class="vr">
+                            </div>
+                            <div class="col-9 ms-auto "
+                                style="height: 40vh; display: flex; flex-direction: column; align-items: flex-start;">
+                                <div class="container text-center">
+                                    <div class="row row-cols-2">
+                                        <div class="col-3">
+                                            <div class=" p-3 ps-2 pe-3 cont">
+                                                <div style="display: flex; align-items: center;">
+
+                                                    <div class="imgMod" data-bs-toggle="modal"
+                                                        data-bs-target="#imgmodal-1">
+                                                        <img src="../assets/images/TonnyJanglov01.jpg" alt="">
+                                                        <small class="text-body-secondary">Resim_1</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="p-3 ps-2 pe-3 cont">
+                                                <div style="display: flex; align-items: center;">
+                                                    <div class="imgMod" data-bs-toggle="modal"
+                                                        data-bs-target="#imgmodal-2">
+                                                        <img src="../assets/images/TonnyJanglov01.jpg" alt="">
+                                                        <small class="text-body-secondary">Resim_2</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="p-3 ps-2 pe-3 cont">
+                                                <div style="display: flex; align-items: center;">
+                                                    <div class="imgMod" data-bs-toggle="modal"
+                                                        data-bs-target="#imgmodal-3">
+                                                        <img src="../assets/images/MaddiBondi01.jpg" alt="">
+                                                        <small class="text-body-secondary">Resim_3</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="p-3 ps-2 pe-3 cont">
+                                                <div style="display: flex; align-items: center;">
+                                                    <div class="imgMod" data-bs-toggle="modal"
+                                                        data-bs-target="#imgmodal-4">
+                                                        <img src="../assets/images/MaddiBondi01.jpg ">
+                                                        <small class="text-body-secondary">Resim_4</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="p-3 ps-2 pe-3 cont">
+                                                <div style="display: flex; align-items: center;">
+                                                    <div class="imgMod" data-bs-toggle="modal"
+                                                        data-bs-target="#imgmodal-5">
+                                                        <img src="../assets/images/MegNesom01.jpg ">
+                                                        <small class="text-body-secondary">Resim_5</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ! ------------------------------------------------------------- -->
+    <!-- ! İmg büyük halleri -->
+    <div class="modal" id="imgmodal-1" style="height: 1000px !important;" tabindex="-1" role="dialog"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content ">
+                <div class="modal-header">
+                    <h3>Resim_1</h3>
+                    <button class="close btn btn-danger btn-sm" type="button" data-bs-dismiss="modal" aria-label="Close"
+                        style="width: 8%; border-radius: 0px;">X</button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="container text-center">
+                        <div class="col-12 "
+                            style="height: 40vh; display: flex; flex-direction: column; align-items: flex-start;">
+                            <div style="display: flex; align-items: center;">
+                                <div class="imgModBig">
+                                    <img src="../assets/images/TonnyJanglov01.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="imgmodal-2" style="height: 1000px !important;" tabindex="-1" role="dialog"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content ">
+                <div class="modal-header">
+                    <h3>Resim_2</h3>
+                    <button class="close btn btn-danger btn-sm" type="button" data-bs-dismiss="modal" aria-label="Close"
+                        style="width: 8%; border-radius: 0px;">X</button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="container text-center">
+                        <div class="col-12 "
+                            style="height: 40vh; display: flex; flex-direction: column; align-items: flex-start;">
+                            <div style="display: flex; align-items: center;">
+                                <div class="imgModBig">
+                                    <img src="../assets/images/TonnyJanglov01.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="imgmodal-3" style="height: 1000px !important;" tabindex="-1" role="dialog"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content ">
+                <div class="modal-header">
+                    <h3>Resim_3</h3>
+                    <button class="close btn btn-danger btn-sm" type="button" data-bs-dismiss="modal" aria-label="Close"
+                        style="width: 8%; border-radius: 0px;">X</button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="container text-center">
+                        <div class="col-12 "
+                            style="height: 40vh; display: flex; flex-direction: column; align-items: flex-start;">
+                            <div style="display: flex; align-items: center;">
+                                <div class="imgModBig">
+                                    <img src="../assets/images/MaddiBondi01.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="imgmodal-4" style="height: 1000px !important;" tabindex="-1" role="dialog"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content ">
+                <div class="modal-header">
+                    <h3>Resim_4</h3>
+                    <button class="close btn btn-danger btn-sm" type="button" data-bs-dismiss="modal" aria-label="Close"
+                        style="width: 8%; border-radius: 0px;">X</button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="container text-center">
+                        <div class="col-12 "
+                            style="height: 40vh; display: flex; flex-direction: column; align-items: flex-start;">
+                            <div style="display: flex; align-items: center;">
+                                <div class="imgModBig">
+                                    <img src="../assets/images/MaddiBondi01.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="imgmodal-5" style="height: 1000px !important;" tabindex="-1" role="dialog"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content ">
+                <div class="modal-header">
+                    <h3>Resim_5</h3>
+                    <button class="close btn btn-danger btn-sm" type="button" data-bs-dismiss="modal" aria-label="Close"
+                        style="width: 8%; border-radius: 0px;">X</button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="container text-center">
+                        <div class="col-12 "
+                            style="height: 40vh; display: flex; flex-direction: column; align-items: flex-start;">
+                            <div style="display: flex; align-items: center;">
+                                <div class="imgModBig">
+                                    <img src="../assets/images/MegNesom01.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--! Startup Bar -->
+    <nav class="navbar navbar-expand-lg bg-dark fixed-bottom algn " style="height: 8%;">
+        <div class="container-fluid ">
+
+            <!-- ! Start drop menü -->
+            <div class="dropup ">
+                <button role="button" type="button" class="btn dropdown mt-3" data-bs-toggle="dropdown">
+                    <i class="fab fa-windows fa-xl" style="color: white;"></i>
+                </button>
+                <ul class="dropdown-menu pt-3 p-1 dropCl"
+                    style="margin: 0px;margin-left: -15px; border-radius: 0px !important;">
+                    <li class="pb-2"><button class="dropdown-item text-white start" data-bs-toggle="modal"
+                            data-bs-target="#pcmodal"><i class="fas fa-desktop"></i>
+                            Bilgisayarım</button>
+                    </li>
+                    <li class="pb-2"><button class="dropdown-item text-white start" data-bs-toggle="modal"
+                            data-bs-target="#appmodal"><i class="fas fa-folder-open"></i>
+                            Uygulamalar</button></li>
+                    <li class="pb-2"><button class="dropdown-item text-white start" data-bs-toggle="modal"
+                            data-bs-target="#imgmodal"><i class="fas fa-images"></i>
+                            Resimler</button></li>
+                    <li class="pb-2"><button class="dropdown-item text-white start" data-bs-toggle="modal"
+                            data-bs-target="#docmodal"><i class="fas fa-folder-open"></i>
+                            Belgelerim</button>
+                    </li>
+                    <li class="pb-2">
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li class="pb-2"><button class="dropdown-item text-white start" onclick="shutDown()"><i
+                                class="fas fa-power-off"></i>
+                            Bilgisayarı
+                            Kapat</button></li>
+                </ul>
+            </div>
+            <form class="d-flex mt-3" role="search" style="width: 19%;">
+                <input class="form-control me-2" type="search" placeholder="Ara" aria-label="Search">
+            </form>
+
+            <!-- ! Küçük drop simgeleri düzenler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-lg-0 mt-3 ">
+                    <div class="dropup mt-1">
+                        <button role="button" type="button" class="btn dropdown " data-bs-toggle="dropdown">
+                            <i class="fa-solid fa-caret-up fa-lg" style="color: white"></i>
+                        </button>
+                        <div>
+                            <div>
+                                <ul class="dropdown-menu p-1 dropCl mr-3 "
+                                    style="margin: 0px; margin-bottom: 14px; border-radius: 0px !important;">
+                                    <div class="d-flex justify-content-center">
+                                        <i class="fa-regular fa-lg fa-envelope icon" style="color: #ffffff;"></i>
+                                        <i class="fa-brands fa-lg fa-bluetooth icon" style="color: #4587c4;"></i>
+                                    </div>
+                                    <div class="d-flex justify-content-center">
+                                        <i class="fa-solid  fa-cloud icon" style="color: #ffffff;"></i>
+                                        <i class="fa-solid  fa-wifi icon" style="color: #ffffff;"></i>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ! Küçük simgeleri düzenler -->
+                    <li class="nav-item ">
+                        <a class="nav-link active smlicon" aria-current="page" href="#"><i
+                                class="fa-solid fa-battery-three-quarters" style="color: white"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link smlicon" href="#"><i class="fa-solid fa-volume-high"
+                                style="color: white"></i></a>
+                    </li>
+                    <!-- ! Tarih saat düzenler -->
+                    <li class="nav-item ms-3 mb-1">
+                        <a id="time" class="nav-link disabled ms-3 p-0 " aria-disabled="true" style="color: white;"></a>
+                        <a id="date" class="nav-link disabled p-0" aria-disabled="true" style="color: white;"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--! -------------------------------------------------------------------------- -->
+
+
+
+
+
+    <!--! Windows Kapatma -->
+    <div id="shutD" class="container text-center p-3" style="background-color: #00000069; display: none;">
+        <div class="row">
+            <div class="col-12">
+                <div id="spinner" class="text-dark">
+                    <div class="spinner-border" role="status">
+                    </div>
+                    <h3>Windows Kapatılıyor...</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="../assets/script.js"></script>
+    <script>
+        showTimeDate();
+    </script>
+</body>
+
+</html>
